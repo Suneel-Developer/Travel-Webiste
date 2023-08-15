@@ -244,7 +244,7 @@
     max-width: 90%;
   }
 
-  .hero_container .box h2 {
+  .hero_container .box h4 {
     font-size: 70px;
   }
   .hero_container .box p {
@@ -272,7 +272,7 @@
   .hero_container .box {
     max-width: 70%;
   }
-  .hero_container .box h2 {
+  .hero_container .box h4 {
     font-size: 40px;
     line-height: 4rem;
   }
