@@ -1,21 +1,16 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
 /* header styling  */
 .header {
   padding: 1.5rem 0.3rem;
-  background: #ffffff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 500;
-}
-.header .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  max-width: 60%;
+  gap: 5rem;
 }
-.header .nav .logo a {
+
+.header .logo {
   color: #111827;
   font-size: 31px;
   font-style: normal;
@@ -23,25 +18,26 @@
   line-height: normal;
   text-transform: uppercase;
   font-family: "Domine", serif;
-}
-.header .nav .logo a span {
-  color: #8b4448;
-  font-size: 16px;
-  float: right;
+  display: flex;
+  flex-direction: column;
 }
 
-.header .nav .navLinks {
+.header .logo span {
+  color: #8b4448;
+  font-size: 16px;
+  text-align: right;
+}
+
+.header ul {
   display: flex;
   gap: 2rem;
 }
-.header .nav .navLinks a {
+.header ul li a {
   color: #000;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  position: relative;
-  display: inline-block;
 }
 
 /* =================================== >Tour Banner  */
@@ -55,7 +51,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 6rem;
 }
 .tour_header h1 {
   color: #aad5d3;
@@ -79,11 +74,7 @@
 }
 
 /* =============================== Offers Container  */
-.offers_container {
-  padding: 2rem 1rem;
-  max-width: 90%;
-  margin: auto;
-}
+
 .offers_container h1 {
   color: #111827;
   font-family: "Domine", serif;
@@ -91,7 +82,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 72px;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 .offers_container .offers {
   display: grid;
@@ -106,9 +97,7 @@
   width: 100%;
   height: 120px;
 }
-.offer .offer_content {
-  padding: 0 2.5rem;
-}
+
 .offer .offer_content .offer_heading {
   color: #8b4448;
   text-align: center;
@@ -129,11 +118,8 @@
 }
 
 /* ============================ Tours Container */
-.tours_container {
-  padding: 2rem 1rem;
-  max-width: 90%;
-  margin: auto;
-  width: 100%;
+.tours_container{
+  padding: 1rem 0;
 }
 .tours_container h1 {
   color: #111827;
@@ -142,15 +128,15 @@
   font-style: normal;
   font-weight: 700;
   line-height: 72px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .tours_container .tours {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 1rem;
 }
 .tours .tour_box {
-  padding: 2rem;
+  padding: 1rem;
   background: #f3f4f6;
 }
 
@@ -202,7 +188,6 @@
   transition: 0.3s;
 }
 
-
 /* Footer styling  */
 .footer {
   background: #8b4448;
@@ -245,9 +230,6 @@
 
 /* Media Query For Responsive Design  */
 @media screen and (max-width: 968px) {
-  .header .nav {
-    max-width: 90%;
-  }
   .offers_container .offers {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -256,30 +238,30 @@
   }
 }
 @media screen and (max-width: 768px) {
-  /* header in mobile screen  */
-  .header .nav .logo a {
+  .header .logo {
     font-size: 20px;
   }
   .header .nav .logo a span {
     font-size: 13px;
   }
+
   .tours_container .tours {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media screen and (max-width: 568px) {
-  .header .nav .logo a {
-    font-size: 13px;
+  .header {
+    gap: 2rem;
   }
-  .header .nav .logo a span {
+  .header .logo {
+    font-size: 15px;
+  }
+  .header .logo span {
     font-size: 10px;
   }
-  .header .nav .navLinks {
-    gap: 1rem;
-  }
-  .header .nav .navLinks a {
-    font-size: 14px;
+  .header ul li a {
+    font-size: 15px;
   }
   .tour_header {
     height: 300px;
@@ -294,9 +276,6 @@
   }
 
   /* Offers Conatiner  */
-  .offers_container {
-    max-width: 90%;
-  }
   .offers_container h1 {
     font-size: 30px;
     margin-bottom: 1rem;
@@ -304,14 +283,8 @@
   .offers_container .offers {
     grid-template-columns: repeat(1, 1fr);
   }
-  .offer .offer_content {
-    padding: 0rem;
-  }
 
   /* tours container  */
-  .tours_container {
-    padding: 0rem;
-  }
   .tours_container h1 {
     font-size: 30px;
     margin-bottom: 1rem;
